@@ -15,7 +15,6 @@ module.exports = function(path, cb = (rs, err) => {}) {
     });
 
     res.on('end', () => {
-      d = d.toString();
       try {
         if (typeof d !== 'object') d = JSON.parse(d);
       } catch(e) {
